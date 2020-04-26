@@ -1,0 +1,12 @@
+.back {
+    background-image: url(../../assets/img/Gayles_Chocolates_2-1100x733.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    background-attachment: fixed;
+    padding-top: 350px;
+    padding-bottom: 300px;
+    padding-right:0%;
+    width:100%;
+}

@@ -1,0 +1,102 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<header>
+  <ul>
+    <i class='fa fa-shopping-cart' style="font-size: 110%;">
+      <span class='counter'></span>
+    </i>
+  </ul>
+</header>
+
+<section class="content-site" id="gan">
+  <div class="container" >
+      <div class='row' style="margin-top:-40%;">
+        <div class='product--blue'>
+          <div class='product_inner'>
+            <!-- <img src="../../assets/img/chocolate-derretido.png">   -->
+            <img src='../../assets/img/ninho.png' style="margin-top:100px" width='200'>
+            <i style="font-size: x-small;">imagem ilustrativa</i>
+            <h5 style="color:brown;">Ninho</h5>
+            <h6 style="color:brown;"><i>Descrição</i></h6>
+            <br>
+            <label>Quantidade</label>
+            <input [(ngModel)]="quantidadeBrigadeiro1" type="number" class="quantidade" min="0"/>
+          </div>
+        </div>
+        <div class='product--orange'>
+          <div class='product_inner'>
+            <img src='../../assets/img/brigadeiro.png' style="margin-top:80px" width='200'>
+            <i style="font-size: x-small;">imagem ilustrativa</i>
+            <h5 style="color:brown;">Tradicional</h5>
+            <h6 style="color:brown;"><i>Descrição</i></h6>
+            <br>
+            <label>Quantidade</label>
+            <input [(ngModel)]="quantidadeBrigadeiro2" type="number" class="quantidade" min="0"/>
+          </div>
+        </div>
+        <div class='product--red'>
+          <div class='product_inner'>
+            <img src='../../assets/img/bicho-de-pé.png' style="margin-top:80px" width='200'>
+            <i style="font-size: x-small;">imagem ilustrativa</i>
+            <h5 style="color:brown;">Bicho de Pé</h5>
+            <h6 style="color:brown;"><i>Descrição</i></h6>
+            <br>
+            <label>Quantidade</label>
+            <input [(ngModel)]="quantidadeBrigadeiro3" type="number" class="quantidade" min="0"/>
+          </div>
+        </div>
+        <div class='product--green'>
+          <div class='product_inner'>
+            <img src='../../assets/img/casadinho.png' style="margin-top:80px" width='200'>
+            <i style="font-size: x-small;">imagem ilustrativa</i>
+            <h5 style="color:brown">Casadinho</h5>
+            <h6 style="color:brown;"><i>Descrição</i></h6>
+            <br>
+            <label>Quantidade</label>
+            <input [(ngModel)]="quantidadeBrigadeiro4" type="number" class="quantidade" min="0"/>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class='product--pink'>
+          <div class='product_inner'>
+            <img src='../../assets/img/sensação.jpg' style="margin-top: 235px;" width='300'>
+            <i style="font-size: x-small;">imagem ilustrativa</i>
+            <h4 style="color:brown;">Sensação</h4>
+            <h5 style="color:brown;"><i>Descrição</i></h5>
+            <br>
+            <label>Quantidade</label>
+            <input [(ngModel)]="quantidadeBrigadeiro5" type="number" class="quantidade" min="0"/>
+          </div>
+        </div>
+        <div class='product--pink'>
+          <div class='product_inner'>
+            <img src='../../assets/img/morango.png' style="margin-top:230px" width='200'>
+            <i style="font-size: x-small;">imagem ilustrativa</i>
+            <h4 style="color:brown;">Morango</h4>
+            <h5 style="color:brown;"><i>Descrição</i></h5>
+            <br>
+            <label>Quantidade</label>
+            <input [(ngModel)]="quantidadeBrigadeiro6" type="number" class="quantidade" min="0"/>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class='product--yellow'>
+          <div class='product_inner'>
+            <img src='../../assets/img/brigadeiro-pote.jpg'>
+            <h4 style="color:brown;">Caixa Completa</h4>
+            <h5 style="color:brown;"><i>Calcule o Preço e peça via Whatsapp <i class="fa fa-whatsapp" ></i></i></h5>
+            <button (click)="calcular()" style="background-color: rgb(185, 37, 74);">Calcular</button>
+            <div style="margin-top:-40px;margin-right:-300px">
+            <label>Total: R$ {{resultado}}</label>
+          </div>
+            <br>
+            <a style="text-decoration:none;" *ngIf="resultado !== '' " class="whatsapp-link" (click)="solicitar()">
+              <i class="fa fa-whatsapp" ></i> Solicitar 
+            </a>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
