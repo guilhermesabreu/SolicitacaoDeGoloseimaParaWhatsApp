@@ -1,5 +1,5 @@
 .back {
-    background-image: url(../../assets/img/Gayles_Chocolates_2-1100x733.jpg);
+    background-image: url(../../assets/img/capa.jpg);
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -9,4 +9,10 @@
     padding-bottom: 300px;
     padding-right:0%;
     width:100%;
+}
+h1{
+    float: left;
+    margin-top: -270px;
+    position: absolute;
+    font-family: Freehand521 BT;
 }

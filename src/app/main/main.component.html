@@ -14,80 +14,44 @@
         <div class='product--blue'>
           <div class='product_inner'>
             <!-- <img src="../../assets/img/chocolate-derretido.png">   -->
-            <img src='../../assets/img/ninho.png' style="margin-top:100px" width='200'>
+            <img src='../../assets/img/palhaChocolate.png' style="margin-top:100px" width='300'>
             <i style="font-size: x-small;">imagem ilustrativa</i>
-            <h5 style="color:brown;">Ninho</h5>
-            <h6 style="color:brown;"><i>Descrição</i></h6>
+            <h3 style="color:rgb(6, 61, 58);">Chocolate</h3>
+            <br>
+            <h6 class="text-center" style="color:rgb(6, 61, 58);">
+              <i>Contém derivados do Leite</i><br>
+              <i>Contém Glútem</i>
+              </h6>
             <br>
             <label>Quantidade</label>
-            <input [(ngModel)]="quantidadeBrigadeiro1" type="number" class="quantidade" min="0"/>
+            <input [(ngModel)]="quantidadepalhaChocolate" type="number" class="quantidade" min="0"/>
           </div>
         </div>
         <div class='product--orange'>
           <div class='product_inner'>
-            <img src='../../assets/img/brigadeiro.png' style="margin-top:80px" width='200'>
+            <img src='../../assets/img/palhaBranca.png' style="margin-top:170px;margin-bottom: 71.7px;" width='250'>
             <i style="font-size: x-small;">imagem ilustrativa</i>
-            <h5 style="color:brown;">Tradicional</h5>
-            <h6 style="color:brown;"><i>Descrição</i></h6>
+            <h3 style="color:rgb(13, 12, 44);">Ninho</h3>
+            <br>
+            <h6 class="text-center" style="color:rgb(13, 12, 44);">
+              <i>Contém derivados do Leite</i><br>
+              <i>Contém Glútem</i>
+            </h6>
             <br>
             <label>Quantidade</label>
-            <input [(ngModel)]="quantidadeBrigadeiro2" type="number" class="quantidade" min="0"/>
-          </div>
-        </div>
-        <div class='product--red'>
-          <div class='product_inner'>
-            <img src='../../assets/img/bicho-de-pé.png' style="margin-top:80px" width='200'>
-            <i style="font-size: x-small;">imagem ilustrativa</i>
-            <h5 style="color:brown;">Bicho de Pé</h5>
-            <h6 style="color:brown;"><i>Descrição</i></h6>
-            <br>
-            <label>Quantidade</label>
-            <input [(ngModel)]="quantidadeBrigadeiro3" type="number" class="quantidade" min="0"/>
-          </div>
-        </div>
-        <div class='product--green'>
-          <div class='product_inner'>
-            <img src='../../assets/img/casadinho.png' style="margin-top:80px" width='200'>
-            <i style="font-size: x-small;">imagem ilustrativa</i>
-            <h5 style="color:brown">Casadinho</h5>
-            <h6 style="color:brown;"><i>Descrição</i></h6>
-            <br>
-            <label>Quantidade</label>
-            <input [(ngModel)]="quantidadeBrigadeiro4" type="number" class="quantidade" min="0"/>
+            <input [(ngModel)]="quantidadepalhaNinho" type="number" class="quantidade" min="0"/>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class='product--pink'>
-          <div class='product_inner'>
-            <img src='../../assets/img/sensação.jpg' style="margin-top: 235px;" width='300'>
-            <i style="font-size: x-small;">imagem ilustrativa</i>
-            <h4 style="color:brown;">Sensação</h4>
-            <h5 style="color:brown;"><i>Descrição</i></h5>
-            <br>
-            <label>Quantidade</label>
-            <input [(ngModel)]="quantidadeBrigadeiro5" type="number" class="quantidade" min="0"/>
-          </div>
-        </div>
-        <div class='product--pink'>
-          <div class='product_inner'>
-            <img src='../../assets/img/morango.png' style="margin-top:230px" width='200'>
-            <i style="font-size: x-small;">imagem ilustrativa</i>
-            <h4 style="color:brown;">Morango</h4>
-            <h5 style="color:brown;"><i>Descrição</i></h5>
-            <br>
-            <label>Quantidade</label>
-            <input [(ngModel)]="quantidadeBrigadeiro6" type="number" class="quantidade" min="0"/>
-          </div>
-        </div>
-      </div>
+      
       <div class="row">
         <div class='product--yellow'>
           <div class='product_inner'>
-            <img src='../../assets/img/brigadeiro-pote.jpg'>
-            <h4 style="color:brown;">Caixa Completa</h4>
-            <h5 style="color:brown;"><i>Calcule o Preço e peça via Whatsapp <i class="fa fa-whatsapp" ></i></i></h5>
-            <button (click)="calcular()" style="background-color: rgb(185, 37, 74);">Calcular</button>
+            <img src='../../assets/img/conjunto-palhas.png'>
+            <br>
+            <h4 style="color:rgb(6, 61, 58);">Total</h4>
+            <h5 style="color:rgb(6, 61, 58);"><i>Calcule o Preço e peça via Whatsapp <i class="fa fa-whatsapp" ></i></i></h5>
+            <button (click)="calcular()" style="background-color:rgb(6, 61, 58);">Calcular</button>
             <div style="margin-top:-40px;margin-right:-300px">
             <label>Total: R$ {{resultado}}</label>
           </div>

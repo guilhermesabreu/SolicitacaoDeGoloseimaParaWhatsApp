@@ -11,13 +11,9 @@ import { DOCUMENT } from '@angular/common';
 })
 export class MainComponent implements OnInit {
 
-  quantidadeBrigadeiro1: number;
-  quantidadeBrigadeiro2: number;
-  quantidadeBrigadeiro3: number;
-  quantidadeBrigadeiro4: number;
-  quantidadeBrigadeiro5: number;
-  quantidadeBrigadeiro6: number;
-  valorBrigadeiro:number = 2;
+  quantidadepalhaChocolate: number;
+  quantidadepalhaNinho: number;
+  valorPalha: number = 3;
   resultado = '';
   resultadoCalculo: string;
 
@@ -29,24 +25,16 @@ export class MainComponent implements OnInit {
   }
 
   calcular(): boolean{
-    if((this.quantidadeBrigadeiro1 == undefined || this.quantidadeBrigadeiro1 == 0) && 
-    (this.quantidadeBrigadeiro2 == undefined || this.quantidadeBrigadeiro2 == 0)
-      && (this.quantidadeBrigadeiro3 == undefined || this.quantidadeBrigadeiro3 == 0)
-       && (this.quantidadeBrigadeiro4 == null || this.quantidadeBrigadeiro4 == 0)
-       && (this.quantidadeBrigadeiro5 == null || this.quantidadeBrigadeiro5 == 0)
-       && (this.quantidadeBrigadeiro6 == null || this.quantidadeBrigadeiro6 == 0)){
-        this.toastr.warning("Selecione no mínimo 1 Goloseima Acima");
+    if((this.quantidadepalhaChocolate == undefined || this.quantidadepalhaChocolate == 0) && 
+    (this.quantidadepalhaNinho == undefined || this.quantidadepalhaNinho == 0)) {
+        this.toastr.warning("Selecione no mínimo 1 Palha Italiana");
         this.resultado = '';
         return false;
       }
-      var calculo1 = this.quantidadeBrigadeiro1 != undefined ? this.quantidadeBrigadeiro1 * this.valorBrigadeiro: 0;
-      var calculo2 = this.quantidadeBrigadeiro2 != undefined ? this.quantidadeBrigadeiro2 * this.valorBrigadeiro : 0;
-      var calculo3 = this.quantidadeBrigadeiro3 != undefined ? (this.quantidadeBrigadeiro3 * this.valorBrigadeiro) : 0;
-      var calculo4 = this.quantidadeBrigadeiro4 != undefined ? this.quantidadeBrigadeiro4 * this.valorBrigadeiro : 0;
-      var calculo5 = this.quantidadeBrigadeiro5 != undefined ? this.quantidadeBrigadeiro5 * this.valorBrigadeiro : 0;
-      var calculo6 = this.quantidadeBrigadeiro6 != undefined ? this.quantidadeBrigadeiro6 * this.valorBrigadeiro : 0;
+      var calculo1 = this.quantidadepalhaChocolate != undefined ? this.quantidadepalhaChocolate * this.valorPalha: 0;
+      var calculo2 = this.quantidadepalhaNinho != undefined ? this.quantidadepalhaNinho * this.valorPalha : 0;
       
-      var soma = parseFloat(calculo1.toString()) + parseFloat(calculo2.toString()) + parseFloat(calculo3.toString()) + parseFloat(calculo4.toString()) + parseFloat(calculo5.toString()) + parseFloat(calculo6.toString());
+      var soma = parseFloat(calculo1.toString()) + parseFloat(calculo2.toString());
 
       this.resultado = soma.toString()+",00";
       return true;
@@ -54,19 +42,25 @@ export class MainComponent implements OnInit {
 
   solicitar(){
     let number = 5513991370696;
-    var doce1 = this.quantidadeBrigadeiro1 !== undefined && this.quantidadeBrigadeiro1 > 0 ? this.quantidadeBrigadeiro1 : 0;
-    var doce2 = this.quantidadeBrigadeiro2 !== undefined && this.quantidadeBrigadeiro2 > 0 ? this.quantidadeBrigadeiro2 : 0;
-    var doce3 = this.quantidadeBrigadeiro3 !== undefined && this.quantidadeBrigadeiro3 > 0 ? this.quantidadeBrigadeiro3 : 0;
-    var doce4 = this.quantidadeBrigadeiro4 !== undefined && this.quantidadeBrigadeiro4 > 0 ? this.quantidadeBrigadeiro4 : 0;
-    var doce5 = this.quantidadeBrigadeiro5 !== undefined && this.quantidadeBrigadeiro5 > 0 ? this.quantidadeBrigadeiro5 : 0;
-    var doce6 = this.quantidadeBrigadeiro6 !== undefined && this.quantidadeBrigadeiro6 > 0 ? this.quantidadeBrigadeiro6 : 0;
+    var chocolate = this.quantidadepalhaChocolate !== undefined && this.quantidadepalhaChocolate > 0 ? this.quantidadepalhaChocolate : 0;
+    var ninho = this.quantidadepalhaNinho !== undefined && this.quantidadepalhaNinho > 0 ? this.quantidadepalhaNinho : 0;
+    let msg;
 
-    let msg = `Olá RizzoAbreu !!! Solicito as seguintes goloseimas: *Ninho* -> ${doce1}, *Tradicional* -> ${doce2}, *Bicho de Pé* -> ${doce3}, *Casadinho* -> ${doce4}, *Sensação* -> ${doce5} e  *Morango* -> ${doce6} -- no valor de *R$${this.resultado}* `;
+    if(ninho == 0){
+      msg = `Olá RizzoAbreu !!! Solicito ${chocolate} *Palhas Italiana Sabor Chocolate* -- no valor de *R$${this.resultado}* `;
+    }
+    else if(chocolate == 0){
+      msg = `Olá RizzoAbreu !!! Solicito ${ninho} *Palhas Italiana Sabor Ninho* -- no valor de *R$${this.resultado}* `;
+    }
+    else {
+      msg = `Olá RizzoAbreu !!! Solicito ${ninho} *Palhas Italiana Sabor Ninho* e ${chocolate} *Sabor Chocolate* -- no valor de *R$${this.resultado}* `;
+    }
+
+    
     
     let target = `https://api.whatsapp.com/send?phone=${encodeURIComponent(number)}&text=${encodeURIComponent(msg)}`;
     
     window.open(target,"_blank");
-    //var url = 'https://web.whatsapp.com/send?phone=5513974058807';
   }
 
 }

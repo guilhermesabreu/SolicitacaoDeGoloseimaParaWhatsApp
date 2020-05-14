@@ -4,7 +4,7 @@
 @import '../node_modules/ngx-bootstrap/datepicker/bs-datepicker.css'; 
 
 .bg-light {
-    background-color:rgb(247, 218, 204) !important;
+    background-color:rgb(219, 248, 219) !important;
     margin:0;
     position: fixed; 
     z-index: 1; 

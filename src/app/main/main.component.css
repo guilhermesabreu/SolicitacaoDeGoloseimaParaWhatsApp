@@ -86,27 +86,19 @@
 }
 
   .product--blue {
+    background-color: rgb(241, 247, 246) !important;
       background-size: contain;
-      background-image: url(../../assets/img/chocolate-derretido.png);
+      background-image: url(../../assets/img/chocolatederretido.png);
       background-repeat: no-repeat;
   }
-  .product--red {
-    background-image: url(../../assets/img/chocolate-derretido.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-  .product--green {
-    background-image: url(../../assets/img/chocolate-derretido.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
   .product--orange {
-    background-image: url(../../assets/img/chocolate-derretido.png);
+    background-color: rgb(241, 247, 246) !important;
+    background-image: url(../../assets/img/chocolatebrancoderretido.png);
     background-repeat: no-repeat;
     background-size: contain;
   } 
-  .product--pink {
-    background-image: url(../../assets/img/chocolate-derretido-redimensionada.png);
+  .product--yellow {
+    background-color: rgb(241, 247, 246) !important;
     background-repeat: no-repeat;
     background-size: contain;
   } 
