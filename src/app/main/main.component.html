@@ -37,7 +37,7 @@
       <div class='row'>
         <div class='product--red'>
           <div class='product_inner'>
-            <img src='../../assets/img/palhaNegresco.png' style="margin-top:170px;margin-bottom: 26px;margin-left: 50px;" width='250'>
+            <img src='../../assets/img/palhaNegresco.png' style="margin-top:170px;margin-bottom: 26px;" width='250'>
             <i style="font-size: x-small;">imagem ilustrativa</i>
             <h3 style="color:rgb(37, 6, 3);">Negresco</h3>
             <br>
@@ -47,7 +47,7 @@
         </div>
         <div class='product--green'>
           <div class='product_inner'>
-            <img src='../../assets/img/palhaMorango.png' style="margin-top:130px;margin-bottom: 26px;margin-left:50px;" width='250'>
+            <img src='../../assets/img/palhaMorango.png' style="margin-top:130px;margin-bottom: 26px;" width='250'>
             <i style="font-size: x-small;">imagem ilustrativa</i>
             <h3 style="color:rgb(240, 77, 124);">Morango</h3>
             <br>
@@ -63,11 +63,16 @@
             <img src='../../assets/img/conjunto-palhas.png'>
             <br>
             <h4 style="color:rgb(6, 61, 58);">Total</h4>
-            <h5 style="color:rgb(6, 61, 58);"><i>Calcule o Preço e peça via Whatsapp <i class="fa fa-whatsapp" ></i></i></h5>
-            <button (click)="calcular()" style="background-color:rgb(6, 61, 58);">Calcular</button>
-            <div style="margin-top:-40px;margin-right:-300px">
+            <h5 style="color:rgb(6, 61, 58);"><i>Calcule o Preço e peça
+               via Whatsapp <i class="fa fa-whatsapp" ></i></i></h5>
+               <div class="col-md-3">
+                <button (click)="calcular()" style="background-color:rgb(6, 61, 58); width: 130px;">Calcular</button>
+                <label>Total: R$ {{resultado}}</label>     
+               </div>
+            
+            <!-- <div style="margin-top:-40px;margin-right:-300px">
             <label>Total: R$ {{resultado}}</label>
-          </div>
+          </div> -->
             <br>
             <a style="text-decoration:none;" *ngIf="resultado !== '' " class="whatsapp-link" (click)="solicitar()">
               <i class="fa fa-whatsapp" ></i> Solicitar 
