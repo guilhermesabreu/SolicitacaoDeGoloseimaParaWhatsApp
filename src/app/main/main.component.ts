@@ -15,7 +15,7 @@ export class MainComponent implements OnInit {
   quantidadepalhaNinho: number;
   quantidadepalhaNegresco: number;
   quantidadepalhaMorango: number;
-  valorPalha: number = 3;
+  valorPalha: string = '3,50';
   resultado = '';
   resultadoCalculo: string;
 
@@ -35,14 +35,20 @@ export class MainComponent implements OnInit {
         this.resultado = '';
         return false;
       }
-      var calculo1 = this.quantidadepalhaChocolate != undefined ? this.quantidadepalhaChocolate * this.valorPalha: 0;
-      var calculo2 = this.quantidadepalhaNinho != undefined ? this.quantidadepalhaNinho * this.valorPalha : 0;
-      var calculo3 = this.quantidadepalhaNegresco != undefined ? this.quantidadepalhaNegresco * this.valorPalha: 0;
-      var calculo4 = this.quantidadepalhaMorango != undefined ? this.quantidadepalhaMorango * this.valorPalha : 0;
+      var calculo1 = this.quantidadepalhaChocolate != undefined ? this.quantidadepalhaChocolate * parseFloat(this.valorPalha.replace(',','.')): 0;
+      var calculo2 = this.quantidadepalhaNinho != undefined ? this.quantidadepalhaNinho * parseFloat(this.valorPalha.replace(',','.')) : 0;
+      var calculo3 = this.quantidadepalhaNegresco != undefined ? this.quantidadepalhaNegresco * parseFloat(this.valorPalha.replace(',','.')): 0;
+      var calculo4 = this.quantidadepalhaMorango != undefined ? this.quantidadepalhaMorango * parseFloat(this.valorPalha.replace(',','.')) : 0;
       
       var soma = parseFloat(calculo1.toString()) + parseFloat(calculo2.toString()) + parseFloat(calculo3.toString()) + parseFloat(calculo4.toString());
 
-      this.resultado = soma.toString()+",00";
+      if(soma.toString().replace('.',',').includes(',')){
+        this.resultado = soma.toString().replace('.',',');  
+      }
+      else{
+        this.resultado = soma.toString()+ ',00';  
+      }
+      
       return true;
   }
 
