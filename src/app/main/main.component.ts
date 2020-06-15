@@ -66,27 +66,27 @@ export class MainComponent implements OnInit {
     var saborNegresco;
 
     if(chocolate != 0){
-      saborChocolate = `--*${chocolate}* Palhas Italiana Sabor *Chocolate* --`;
+      saborChocolate = `-- *${chocolate}* Palhas Italiana Sabor *Chocolate* --`;
     }else{
       saborChocolate = '';
     }
 
     if(ninho != 0){
-      saborNinho = `--*${ninho}* Palhas Italiana Sabor *Ninho* --`;
+      saborNinho = `-- *${ninho}* Palhas Italiana Sabor *Ninho* --`;
     }
     else{
       saborNinho = '';
     }
 
     if(negresco != 0){
-      saborNegresco = `--*${negresco}* Palhas Italiana Sabor *Negresco* --`;
+      saborNegresco = `-- *${negresco}* Palhas Italiana Sabor *Negresco* --`;
     }
     else{
       saborNegresco = '';
     }
 
     if(morango != 0){
-      saborMorango = `--*${morango}* Palhas Italiana Sabor *Morango* --`;
+      saborMorango = `-- *${morango}* Palhas Italiana Sabor *Morango* --`;
     }
     else{
       saborMorango = '';
