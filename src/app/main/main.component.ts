@@ -15,7 +15,7 @@ export class MainComponent implements OnInit {
   quantidadepalhaNinho: number;
   quantidadepalhaNegresco: number;
   quantidadepalhaMorango: number;
-  valorPalha: string = '3,50';
+  valorPalha: string = '4,00';
   resultado = '';
   resultadoCalculo: string;
 
