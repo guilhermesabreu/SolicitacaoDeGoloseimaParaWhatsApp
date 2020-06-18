@@ -114,6 +114,11 @@
     background-repeat: no-repeat;
     background-size: contain;
   }
+  .product--black {
+    background-color: rgb(241, 247, 246) !important;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
    
 
   .product img, .product--blue img, .product--orange img, .product--red img, .product--green img, .product--yellow img, .product--pink img {
