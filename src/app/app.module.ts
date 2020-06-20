@@ -1,6 +1,7 @@
 /*External Componnents*/
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ModalModule } from 'ngx-bootstrap/modal';
 import { ToastrModule } from 'ngx-toastr';
 import { FormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -29,6 +30,7 @@ import { BackComponent } from './back/back.component';
       AppRoutingModule,
       BrowserAnimationsModule,
       ToastrModule.forRoot(),
+      ModalModule.forRoot(),
       FormsModule,
    ],
    providers: [],

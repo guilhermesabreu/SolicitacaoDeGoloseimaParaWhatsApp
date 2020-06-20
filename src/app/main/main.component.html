@@ -90,11 +90,8 @@
                 <label>Total: R$ {{resultado}}</label>     
                </div>
             
-            <!-- <div style="margin-top:-40px;margin-right:-300px">
-            <label>Total: R$ {{resultado}}</label>
-          </div> -->
             <br>
-            <a style="text-decoration:none;" class="whatsapp-link" (click)="solicitar()">
+            <a style="text-decoration:none;" class="whatsapp-link" (click)="openModal(template)">
               <i class="fa fa-whatsapp" ></i> Solicitar 
             </a>
           </div>
@@ -102,3 +99,29 @@
       </div>
   </div>
 </section>
+<ng-template #template>
+  <div class="container" style="padding: 10px;">
+    <div class="modal-header">
+      <h4 style="color:rgb(21, 95, 91);" class="modal-title pull-left">Confirme Seu Endereço abaixo</h4>
+      <button type="button" class="close pull-right" 
+      aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-12">
+    <label style="color:rgb(21, 95, 91);"><i>Endereço:</i> </label>
+    <input type="text" [(ngModel)]="endereco" style="width: 100%; font-size: small; font-weight: 200;">
+    </div>
+</div>
+</div>
+<div class="container" style="padding: 10px;">
+<div class="modal-footer btn-group d-flex">
+  Confirmar <i style="margin-left: 5px;margin-right: 10px;" class="fa fa-arrow-right" aria-hidden="true"></i>
+  <a style="text-decoration:none; border-radius: 100%;width: 50px;
+  height: 3%;" class="whatsapp-link" (click)="solicitar()">
+    <i class="fa fa-whatsapp" ></i> 
+  </a>
+</div>
+</div>
+</ng-template>
