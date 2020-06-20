@@ -18,7 +18,7 @@ export class MainComponent implements OnInit {
   quantidadepalhaMorango: number;
   quantidadePote: number;
   valorPalha: string = '4,00';
-  valorPote: string = '6,00';
+  valorPote: string = '8,00';
   resultado = '';
   resultadoCalculo: string;
   
