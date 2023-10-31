@@ -1,4 +1,0 @@
-Problema
--Node deprecisado, erro: netlify errorThe callback was already called.");
-Solução
--npm i netlify-cms-app

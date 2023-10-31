@@ -12,19 +12,19 @@ import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 })
 export class MainComponent implements OnInit {
   
-  quantidadepalhaChocolate: number;
-  quantidadepalhaNinho: number;
-  quantidadepalhaNegresco: number;
-  quantidadepalhaMorango: number;
-  quantidadePote: number;
+  quantidadepalhaChocolate!: number;
+  quantidadepalhaNinho!: number;
+  quantidadepalhaNegresco!: number;
+  quantidadepalhaMorango!: number;
+  quantidadePote!: number;
   valorPalha: string = '4,00';
   valorPote: string = '8,00';
   resultado = '';
-  resultadoCalculo: string;
+  resultadoCalculo!: string;
   
-  endereco: string;
+  endereco!: string;
   
-  modalRef: BsModalRef;
+  modalRef!: BsModalRef;
   constructor(private toastr: ToastrService
     ,public router: Router
     ,public modalService: BsModalService
@@ -135,7 +135,7 @@ export class MainComponent implements OnInit {
     
     obterLocalizacao(){
       let endereco;
-      const successfulLookup = (position) => {
+      const successfulLookup = (position:any) => {
         console.log(position);
         const {latitude, longitude} = position.coords;
         console.log(latitude);
