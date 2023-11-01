@@ -72,7 +72,7 @@ export class MainComponent implements OnInit {
           this.toastr.warning("Selecione no mínimo 1 Palha Italiana e Calcule o preço");
         }
         else{
-          let number = 5513991370696;
+          let number = 5513998050464;
           var chocolate = this.quantidadepalhaChocolate !== undefined && this.quantidadepalhaChocolate > 0 ? this.quantidadepalhaChocolate : 0;
           var ninho = this.quantidadepalhaNinho !== undefined && this.quantidadepalhaNinho > 0 ? this.quantidadepalhaNinho : 0;
           var negresco = this.quantidadepalhaNegresco !== undefined && this.quantidadepalhaNegresco > 0 ? this.quantidadepalhaNegresco : 0;
